@@ -1,0 +1,6 @@
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\Robots\Robots\bin\Debug\Robots.exe.config
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\Robots\Robots\bin\Debug\Robots.exe
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\Robots\Robots\bin\Debug\Robots.pdb
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\Robots\Robots\obj\Debug\Robots.csprojResolveAssemblyReference.cache
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\Robots\Robots\obj\Debug\Robots.exe
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\Robots\Robots\obj\Debug\Robots.pdb
