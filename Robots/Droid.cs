@@ -13,7 +13,7 @@ namespace Robots
         {
             this.name = name;
             this.hasWheels = true;
-            this.languages = new List<string> {"italian","french","english","spanish","russian" };
+            this.languages = new List<string> {"italian","french","droidspeak", "shyriiwook", "jawaese", "english", "spanish", "russian" };
             this.awake = true;
             this.batteryCharge = 100;
         }
@@ -32,6 +32,26 @@ namespace Robots
                 this.batteryCharge -= 5;
             }
 
+        }
+
+        public void LearnLanguage(string language)
+        {
+            if (this.awake)
+            {
+                this.languages.Add(language);
+                this.batteryCharge -= 40;
+                CheckBattery();
+            }
+        }
+
+        public void ForgetLanguage(string language)
+        {
+            if (this.awake)
+            {
+                this.languages.Remove(language);
+                this.batteryCharge -= 30;
+                CheckBattery();
+            }
         }
     }
 }
