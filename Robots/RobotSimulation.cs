@@ -32,6 +32,7 @@ namespace Robots
 
             //Drone Fly
             Aero.Fly();
+            Aero.Fly();
             Aero.Land();
 
             //Droid Languages

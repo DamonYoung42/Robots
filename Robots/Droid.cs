@@ -41,6 +41,10 @@ namespace Robots
                 this.batteryCharge -= 40;
                 CheckBattery();
             }
+            else
+            {
+                WriteAsleep();
+            }
         }
 
         public void ForgetLanguage(string language)
@@ -52,9 +56,13 @@ namespace Robots
                 this.batteryCharge -= 30;
                 CheckBattery();
             }
+            else
+            {
+                WriteAsleep();
+            }
         }
 
-        public string GetLanguages()
+        protected string GetLanguages()
         {
       
                  return string.Join(", ", this.languages);

@@ -38,6 +38,10 @@ namespace Robots
                 this.batteryCharge -= 35;
                 CheckBattery();
             }
+            else
+            {
+                WriteAsleep();
+            }
         }
 
         public override void Eat()
@@ -47,6 +51,10 @@ namespace Robots
                 Console.WriteLine("{0}: Unfortunately, I don't get to choose what I eat. It's just a scrap bonanza in my house.", this.name);
                 this.batteryCharge -= 10;
                 CheckBattery();
+            }
+            else
+            {
+                WriteAsleep();
             }
         }
         public void ChangeBatterySupply()
