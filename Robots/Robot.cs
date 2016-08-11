@@ -24,7 +24,7 @@ namespace Robots
 
         }
 
-        public virtual void Talk()
+        public virtual void IntroduceMyself()
         {
             if (this.awake)
             {
@@ -42,6 +42,10 @@ namespace Robots
                 Console.WriteLine("{0}: See you later. I'm going to sleep.", this.name);
                 this.awake = false;
             }
+            else
+            {
+                WriteAsleep();
+            }
         }
 
         public virtual void Eat()
@@ -57,6 +61,7 @@ namespace Robots
 
         public virtual void RechargeBattery()
         {
+            Console.WriteLine("{0} is recharging ...", this.name);
             this.batteryCharge = 100;
         }
 
@@ -76,7 +81,18 @@ namespace Robots
 
         public virtual void WriteAsleep()
         {
-            Console.WriteLine("I'm currently asleep and not responding.");
+            Console.WriteLine("Recorded message from {0}: I'm currently asleep and not responding.", this.name);
+        }
+
+        public virtual void WriteBatteryCharge()
+        {
+            Console.WriteLine("{0}: Battery level = {1}", this.name, this.GetBatteryCharge().ToString());
+
+        }
+
+        public int GetBatteryCharge()
+        {
+            return this.batteryCharge;
         }
     }
 

@@ -22,23 +22,39 @@ namespace Robots
             this.batteryCharge = 100;
         }
 
-        public override void Talk()
+        public override void IntroduceMyself()
         {
-            base.Talk();
-            Console.WriteLine("I'm just a dumb vacuum. I slide around all day cleaning up your messy house.", this.name);
-            this.batteryCharge -= 5;
+            if (this.awake)
+            {
+                base.IntroduceMyself();
+                Console.WriteLine("I'm just a dumb vacuum. I slide around all day cleaning up your messy house.", this.name);
+                this.batteryCharge -= 5;
+            }
+
+            else                
+            {
+                WriteAsleep();
+            }
         }
 
         public void CleanHouse()
         {
             if (this.awake)
             {
-                Console.WriteLine("I'm cleaning the house right now. Please watch out.");
+                Console.WriteLine("{0}: I'm cleaning the house right now. Please watch out.", this.name);
                 this.batteryCharge -= 35;
                 CheckBattery();
             }
+        }
 
-
+        public override void Eat()
+        {
+            if (this.awake)
+            {
+                Console.WriteLine("{0}: Unfortunately, I don't get to choose what I eat. It's just a scrap bonanza in my house.", this.name);
+                this.batteryCharge -= 10;
+                CheckBattery();
+            }
         }
     }
 }

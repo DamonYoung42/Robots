@@ -18,7 +18,7 @@ namespace Robots
             this.batteryCharge = 100;
         }
 
-        public override void Talk()
+        public override void IntroduceMyself()
         {
             if (this.awake)
             {
@@ -65,7 +65,7 @@ namespace Robots
         {
             if (this.batteryCharge < 5)
             {
-                Console.WriteLine("Oops, I've run out of battery life and I'm going to crash!");
+                Console.WriteLine("{0}: Oops, I've run out of battery life and I'm going to crash!", this.name);
                 this.awake = false;        
             }
         }

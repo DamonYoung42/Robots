@@ -18,14 +18,18 @@ namespace Robots
             this.batteryCharge = 100;
         }
 
-        public override void Talk()
+        public override void IntroduceMyself()
         {
             if (this.awake)
             {
-                base.Talk();
-                Console.WriteLine("But I'm not just any robot. I'm a droid. I'm smarter than most robots.", this.name);
-
+                base.IntroduceMyself();
+                Console.WriteLine("But I'm not just any robot. I'm a droid. I'm smarter than most robots.");
+                WriteLanguages();
                 this.batteryCharge -= 5;
+            }
+            else
+            {
+                WriteAsleep();
             }
 
         }
@@ -35,7 +39,7 @@ namespace Robots
             if (this.awake)
             {
                 this.languages.Add(language);
-                Console.WriteLine("I just learned how to speak in {0}", language);
+                Console.WriteLine("{0}: I just learned how to speak in {1}", this.name, language);
                 this.batteryCharge -= 40;
                 CheckBattery();
             }
@@ -46,7 +50,7 @@ namespace Robots
             if (this.awake)
             {
                 this.languages.Remove(language);
-                Console.WriteLine("I just forgot all of my {0}", language);
+                Console.WriteLine("{0}: I just forgot all of my {1}", this.name, language);
                 this.batteryCharge -= 30;
                 CheckBattery();
             }
