@@ -10,9 +10,9 @@ namespace Robots
     {
         public string powerSupply;
 
-        public Vacuum(string name) : base(name)
+        public Vacuum(string name, string powerSupply) : base(name)
         {
-            this.powerSupply = "Electric";
+            this.powerSupply = powerSupply;
         }
 
         public override void IntroduceMyself()

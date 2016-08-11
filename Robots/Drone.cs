@@ -10,16 +10,16 @@ namespace Robots
     {
         public bool canFly; 
 
-        public Drone(string name) : base(name)
+        public Drone(string name, bool canFly) : base(name)
         {
-            this.canFly = true;
+            this.canFly = canFly;
         }
 
         public override void IntroduceMyself()
         {
             if (this.awake)
             {
-                Console.WriteLine("Hello, everybody! My name is {0} and I am a drone. I may be the coolest type of robot because I can fly!", this.name);
+                Console.WriteLine("Hello, everybody! My name is {0} and I am a drone. Drones may be the coolest type of robot because some have the ability to fly!", this.name);
                 this.batteryCharge -= 5;
                 CheckBattery();
             }
@@ -31,31 +31,46 @@ namespace Robots
 
         public void Fly()
         {
-            if (this.awake)
+            if (this.canFly)
             {
-                Console.WriteLine("{0}: Look at me, I'm flying!!!", this.name);
-                this.batteryCharge -= 50;
-                CheckBattery();
+                if (this.awake)
+                {
+                    Console.WriteLine("{0}: Look at me, I'm flying!!!", this.name);
+                    this.batteryCharge -= 50;
+                    CheckBattery();
+                }
+                else
+                {
+                    WriteAsleep();
+                }
             }
             else
             {
-                WriteAsleep();
+                Console.WriteLine("{0}: Sorry, I'm not a flying drone.", this.name);
             }
+
         }
 
         public void Land()
         {
-            if (this.awake)
+            if (this.canFly)
             {
-                Console.WriteLine("{0}: Coming in for a landing. Watch out!", this.name);
-                this.batteryCharge -= 20;
-                CheckBattery();
+                if (this.awake)
+                {
+                    Console.WriteLine("{0}: Coming in for a landing. Watch out!", this.name);
+                    this.batteryCharge -= 20;
+                    CheckBattery();
+                }
+                else
+                {
+                    WriteAsleep();
+                }
             }
             else
             {
-                WriteAsleep();
+                Console.WriteLine("{0}: Sorry, I'm not a flying drone.", this.name);
             }
-            
+
         }
 
         public override void CheckBattery()

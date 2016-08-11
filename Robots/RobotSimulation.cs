@@ -17,13 +17,15 @@ namespace Robots
         {
             //Create Robot objects
             Droid Brian = new Droid("Brian");
-            Vacuum Harry = new Vacuum("Harry");
-            Drone Aero = new Drone("Aero");
+            Vacuum Harry = new Vacuum("Harry","Electric");
+            Drone Aero = new Drone("Aero", true);
+            Drone NoFlyZone = new Drone("NoFlyZone", false);
 
             //Introduce Robots
             Brian.IntroduceMyself();
             Harry.IntroduceMyself();
             Aero.IntroduceMyself();
+            NoFlyZone.IntroduceMyself();
 
             //Eat
             Brian.Eat();
@@ -32,7 +34,7 @@ namespace Robots
 
             //Drone Fly
             Aero.Fly();
-            Aero.Fly();
+            NoFlyZone.Fly();
             Aero.Land();
 
             //Droid Languages
@@ -48,6 +50,7 @@ namespace Robots
             Harry.WriteBatteryCharge();
             Brian.WriteBatteryCharge();
             Aero.WriteBatteryCharge();
+            NoFlyZone.WriteBatteryCharge();
 
             //Vacuum PowerSupply
             Harry.ChangeBatterySupply();
@@ -61,6 +64,11 @@ namespace Robots
             Brian.IntroduceMyself();
             Harry.IntroduceMyself();
             Aero.IntroduceMyself();
+
+            Brian.Wake();
+            Harry.Wake();
+            Aero.Wake();
+            NoFlyZone.Wake();
 
             //Robots Recharge
             Brian.RechargeBattery();

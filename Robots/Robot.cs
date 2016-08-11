@@ -64,6 +64,7 @@ namespace Robots
         public virtual void Wake()
         {
             this.awake = true;
+            Console.WriteLine("{0}: Hello, I'm ready to help you.", this.name);
             CheckBattery();
         }
 
