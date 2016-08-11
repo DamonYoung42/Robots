@@ -13,6 +13,7 @@ namespace Robots
         public Vacuum(string name, string powerSupply) : base(name)
         {
             this.powerSupply = powerSupply;
+            this.IntroduceMyself();
         }
 
         public override void IntroduceMyself()

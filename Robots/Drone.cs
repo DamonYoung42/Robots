@@ -8,11 +8,12 @@ namespace Robots
 {
     public class Drone : Robot
     {
-        public bool canFly; 
+        public bool canFly;
 
         public Drone(string name, bool canFly) : base(name)
         {
             this.canFly = canFly;
+            this.IntroduceMyself();
         }
 
         public override void IntroduceMyself()
@@ -21,7 +22,7 @@ namespace Robots
             {
                 if (this.canFly)
                 {
-                    Console.WriteLine("{0}: Sorry, I'm not a flying drone", this.name);          
+                    Console.WriteLine("Hello, everybody! My name is {0}. But I'm a flying drone, which means I'm not just a robot.", this.name);          
                 }
                 else
                 {

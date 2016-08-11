@@ -13,7 +13,7 @@ namespace Robots
         public Droid (string name) : base(name)
         {
             this.languages = new List<string> {"italian","french","droidspeak", "shyriiwook", "jawaese", "english", "spanish", "russian" };
-
+            this.IntroduceMyself();
         }
 
         public override void IntroduceMyself()

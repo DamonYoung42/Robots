@@ -21,12 +21,6 @@ namespace Robots
             Drone Aero = new Drone("Aero", true);
             Drone NoFlyZone = new Drone("NoFlyZone", false);
 
-            //Introduce Robots
-            Brian.IntroduceMyself();
-            Harry.IntroduceMyself();
-            Aero.IntroduceMyself();
-            NoFlyZone.IntroduceMyself();
-
             //Eat
             Brian.Eat();
             Harry.Eat();
@@ -59,11 +53,13 @@ namespace Robots
             Brian.Sleep();
             Harry.Sleep();
             Aero.Sleep();
+            NoFlyZone.Sleep();
 
             //Robots Test Asleep
             Brian.IntroduceMyself();
             Harry.IntroduceMyself();
             Aero.IntroduceMyself();
+            NoFlyZone.IntroduceMyself();
 
             Brian.Wake();
             Harry.Wake();

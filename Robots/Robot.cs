@@ -52,7 +52,10 @@ namespace Robots
                 this.batteryCharge -= 10;
                 CheckBattery();
             }
-
+            else
+            {
+                WriteAsleep();
+            }
         }
 
         public virtual void RechargeBattery()
