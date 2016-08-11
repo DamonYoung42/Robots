@@ -10,18 +10,14 @@ namespace Robots
     {
 
         public string name;
-        public int legs;
-        public int arms;
-        public List<string> languages;
-        public bool canDance;
-        public bool canRun;
-        public bool hasWheels;
         public int batteryCharge;
         public bool awake;
 
-        public Robot()
+        public Robot(string name)
         {
-
+            this.name = name;
+            this.awake = true;
+            this.batteryCharge = 100;
         }
 
         public virtual void IntroduceMyself()

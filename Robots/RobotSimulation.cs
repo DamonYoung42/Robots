@@ -48,6 +48,9 @@ namespace Robots
             Brian.WriteBatteryCharge();
             Aero.WriteBatteryCharge();
 
+            //Vacuum PowerSupply
+            Harry.ChangeBatterySupply();
+
             //Robots Sleep
             Brian.Sleep();
             Harry.Sleep();

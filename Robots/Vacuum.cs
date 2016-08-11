@@ -8,18 +8,11 @@ namespace Robots
 {
     public class Vacuum : Robot
     {
+        public string powerSupply;
 
-
-        public Vacuum(string name)
+        public Vacuum(string name) : base(name)
         {
-            this.name = name;
-            this.canDance = false;
-            this.canRun = false;
-            this.arms = 0;
-            this.legs = 0;
-            this.hasWheels = true;
-            this.awake = true;
-            this.batteryCharge = 100;
+            this.powerSupply = "Electric";
         }
 
         public override void IntroduceMyself()
@@ -55,6 +48,22 @@ namespace Robots
                 this.batteryCharge -= 10;
                 CheckBattery();
             }
+        }
+        public void ChangeBatterySupply()
+        {
+            if (this.powerSupply == "Electric")
+            {
+                this.powerSupply = "Battery";
+            }
+            else
+            {
+                this.powerSupply = "Electric";
+            }
+        }
+
+        public string GetBatterySupply()
+        {
+            return this.powerSupply;
         }
     }
 }

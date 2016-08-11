@@ -8,14 +8,11 @@ namespace Robots
 {
     public class Drone : Robot
     {
-        public Drone(string name)
+        public bool canFly; 
+
+        public Drone(string name) : base(name)
         {
-            this.name = name;
-            this.canDance = false;
-            this.canRun = false;
-            this.hasWheels = true;
-            this.awake = true;
-            this.batteryCharge = 100;
+            this.canFly = true;
         }
 
         public override void IntroduceMyself()

@@ -8,14 +8,12 @@ namespace Robots
 {
     public class Droid : Robot
     {
-        
-        public Droid (string name)
+        public List<string> languages;
+
+        public Droid (string name) : base(name)
         {
-            this.name = name;
-            this.hasWheels = true;
             this.languages = new List<string> {"italian","french","droidspeak", "shyriiwook", "jawaese", "english", "spanish", "russian" };
-            this.awake = true;
-            this.batteryCharge = 100;
+
         }
 
         public override void IntroduceMyself()
@@ -59,7 +57,7 @@ namespace Robots
         public string GetLanguages()
         {
       
-                 return string.Join(" and ", this.languages);
+                 return string.Join(", ", this.languages);
             
         }
 
