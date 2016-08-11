@@ -36,7 +36,7 @@ namespace Robots
         {
             if (this.awake)
             {
-                Console.WriteLine("Look at me, I'm flying!!!");
+                Console.WriteLine("{0}: Look at me, I'm flying!!!", this.name);
                 this.batteryCharge -= 50;
                 CheckBattery();
             }
@@ -50,7 +50,7 @@ namespace Robots
         {
             if (this.awake)
             {
-                Console.WriteLine("Coming in for a landing. Watch out!!!");
+                Console.WriteLine("{0}: Coming in for a landing. Watch out!", this.name);
                 this.batteryCharge -= 20;
                 CheckBattery();
             }

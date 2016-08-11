@@ -59,13 +59,13 @@ namespace Robots
         public string GetLanguages()
         {
       
-                 return string.Join("/", this.languages);
+                 return string.Join(" and ", this.languages);
             
         }
 
         public void WriteLanguages()
         {
-            Console.WriteLine("I speak many languages, including {0}: ", this.GetLanguages());
+            Console.WriteLine("I speak many languages, including {0}. ", this.GetLanguages());
         }
     }
 }
