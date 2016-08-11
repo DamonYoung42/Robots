@@ -19,7 +19,15 @@ namespace Robots
         {
             if (this.awake)
             {
-                Console.WriteLine("Hello, everybody! My name is {0} and I am a drone. Drones may be the coolest type of robot because some have the ability to fly!", this.name);
+                if (this.canFly)
+                {
+                    Console.WriteLine("{0}: Sorry, I'm not a flying drone", this.name);          
+                }
+                else
+                {
+                    Console.WriteLine("Hello, everybody! My name is {0} and I am a non-flying drone.", this.name);
+                }
+
                 this.batteryCharge -= 5;
                 CheckBattery();
             }
